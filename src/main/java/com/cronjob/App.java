@@ -33,7 +33,7 @@ public class App
             List<EnvVar> envVarList = new ArrayList<>();
             EnvVar envVar1 = new EnvVar();
             envVar1.setName("API");
-            envVar1.setValue("https://wwwegenciaeu.int-maui.sb.karmalab.net/config-external-import-service/v1/external-configs/trigger-refresh");
+            envVar1.setValue("https://localhost/v1/test");
             envVarList.add(envVar1);
 
             EnvVar envVar2 = new EnvVar();
@@ -48,7 +48,7 @@ public class App
 
             EnvVar envVar4 = new EnvVar();
             envVar4.setName("BASIC_KEY");
-            envVar4.setValue("YTI5ZWU3MmUtZTY0Ni00ZDkwLTkwNWMtNTk2OWNmM2U2NmE5OlBmam9jbFZoaUpTNDJSelFNVDJqal9qcVNxU0ZYdUtf");
+            envVar4.setValue("YTI5ZWUN");
             envVarList.add(envVar4);
 
             CronJob cronJob1 = new CronJobBuilder()
@@ -65,7 +65,7 @@ public class App
                     .withNewSpec()
                     .addNewContainer()
                     .withName("update-domain-lists-from-config-external-import-service-test")
-                    .withImage("egencia-docker-virtual.egencialab.labartifactory.alm.expedia.biz/schedule-endpoint-executor:latest")
+                    .withImage("xyz:latest")
                     .withEnv(envVarList)
                     .withArgs("payload={}")
                     .endContainer()
